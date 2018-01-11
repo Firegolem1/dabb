@@ -6,22 +6,22 @@ var player = {
   moneyMax: undefined,
   mps: 0,
   costs: {
-    c: 10,
+    b: 10,
     s: 100,
     m: 1000,
   },
   tenCosts: {
-    dTen: this.costs.c * (10 ^ 10),
+    dTen: this.costs.b * (10 ^ 10),
     sTen: this.costs.s * (10 ^ 10),
     mTen: this.costs.m * (10 ^ 10),
   },
   amounts: {
-    c: 0,
+    b: 0,
     s: 0,
     m: 0
   },
   mults: {
-    c: 1,
+    b: 1,
     s: 1,
     m: 1,
     nD: 1,
@@ -43,7 +43,7 @@ var player = {
     
   }
 }
-const TIER_NAMES = ["c", "s", "m"];
+const TIER_NAMES = ["b", "s", "m"];
 
 parseFloat(player.money);
 
@@ -298,13 +298,13 @@ function reset() {
   player.money = 10;
   player.moneyMax = undefined;
   player.mps = 0;
-  player.costs.c = 10;
+  player.costs.b = 10;
   player.costs.s = 100;
   player.costs.m = 1000;
   player.tenCosts.dTen = this.dCost * (10 ^ 10);
   player.tenCosts.sTen = this.sCost * (10 ^ 10);
   player.tenCosts.mTen = this.mCost * (10 ^ 10);
-  player.amounts.c = 0;
+  player.amounts.b = 0;
   player.amounts.s = 0;
   player.amounts.m = 0;
   player.mults.c = 1;
@@ -317,7 +317,7 @@ function reset() {
 function getMults() {
    display();
    if (player.materialNum > 1) {
-     player.mults.c = player.mults.nD;
+     player.mults.b = player.mults.nD;
      player.mults.s = player.mults.nS;
      player.mults.m = player.mults.nM;
      reset();

@@ -47,25 +47,7 @@ const TIER_NAMES = ["b", "s", "m"];
 
 parseFloat(player.money);
 
-/*
-function setTheme(name) {
-    document.querySelectorAll("link").forEach( function(e) {
-        if (e.href.includes("theme")) e.remove();
-    });
-    if(name === undefined) {
-        document.getElementById("theme").innerHTML="Current theme: Normal";
-    } else {
-        document.getElementById("theme").innerHTML="Current theme: " + name;
-    }
-    if (name === undefined) return;
-    var head = document.head;
-    var link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = "stylesheets/theme-" + name + ".css";
-    head.appendChild(link);
-}
-*/
+
 
 function formatValue(x, places) {
   var power = Math.floor(Math.log10(x))
